@@ -13,6 +13,7 @@
     <modules>
         <module>repository</module>
         <module>brick-attack</module>
+        <module>brick-attack-leapmotion</module>
     </modules>
 
     <build>

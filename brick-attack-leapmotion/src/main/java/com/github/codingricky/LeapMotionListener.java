@@ -1,4 +1,4 @@
-package org.skree.brickattack;
+package com.github.codingricky;
 
 
 import com.leapmotion.leap.Controller;
@@ -22,6 +22,7 @@ public class LeapMotionListener extends Listener {
     }
 
     public float getX() {
+
         return x;
     }
 }

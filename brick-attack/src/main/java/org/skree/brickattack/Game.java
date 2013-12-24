@@ -18,8 +18,6 @@ import java.util.ArrayList;
 public class Game extends Canvas {
 
     private static final long serialVersionUID = 1L;
-    private final Controller leapController;
-    private final LeapMotionListener leapMotionListener;
 
     private PaddleEntity paddle;
     private BallEntity ball;
@@ -57,11 +55,6 @@ public class Game extends Canvas {
      * Creates Game object and starts the game running.
      */
     public Game() {
-        // hook up the leap motion controls
-        leapController = new Controller();
-        leapMotionListener = new LeapMotionListener();
-        leapController.addListener(leapMotionListener);
-
         // Create a JFrame for our game
         JFrame container = new JFrame("Brick Attack");
 
@@ -331,24 +324,25 @@ public class Game extends Canvas {
             // over
             g.dispose();
             strategy.show();
-
-            // Figure out movement of paddle.
-            paddle.setHorizontalSpeed(leapMotionListener.getX() * 3);
-
-//
-//            if ((keyInputHandler.isLeftPressed()) && (!keyInputHandler.isRightPressed())) {
-//                paddle.setHorizontalSpeed(-300);
-//            } else if (!keyInputHandler.isLeftPressed() && (keyInputHandler.isRightPressed())) {
-//                paddle.setHorizontalSpeed(300);
-//            }
-
-
+            movePaddle(paddle);
 
             // Pause for a little bit
             try {
                 Thread.sleep(10);
             } catch (Exception e) {
             }
+        }
+    }
+
+    protected void movePaddle(PaddleEntity paddle) {
+        // Figure out movement of paddle.
+        paddle.setHorizontalSpeed(0);
+
+
+        if ((keyInputHandler.isLeftPressed()) && (!keyInputHandler.isRightPressed())) {
+            paddle.setHorizontalSpeed(-300);
+        } else if (!keyInputHandler.isLeftPressed() && (keyInputHandler.isRightPressed())) {
+            paddle.setHorizontalSpeed(300);
         }
     }
 }
