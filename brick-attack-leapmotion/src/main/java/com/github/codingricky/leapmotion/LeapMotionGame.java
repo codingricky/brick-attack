@@ -1,4 +1,4 @@
-package com.github.codingricky;
+package com.github.codingricky.leapmotion;
 
 import com.leapmotion.leap.Controller;
 import org.skree.brickattack.Game;
