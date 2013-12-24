@@ -1,0 +1,4 @@
+.idea
+*.iml
+brick-attack/target
+repository/target
