@@ -1,4 +1,4 @@
-Brick-Attack LeapMotion
+Brick-Attack Leap Motion
 ========================
 
 [![Build Status](https://travis-ci.org/codingricky/brick-attack-leapmotion.png?branch=leap-motion)](https://travis-ci.org/codingricky/brick-attack-leapmotion)
