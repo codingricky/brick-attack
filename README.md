@@ -1,14 +1,17 @@
-brick-attack
-============
+Brick-Attack LeapMotion
+========================
 
-A simple Breakout clone written in Java. Uses Java Swing and AWT for the 2D graphics.
+As part of the [DiUS](http://www.dius.com.au) Hack Day, I took an existing [Breakout clone](https://github.com/michaelskree/brick-attack) and attached very basic
+[Leap Motion](https://www.leapmotion.com/) controls to it. The reasons I did this were firstly to justify my purchase of the Leap Motion toy :), and also secondly
+to experiment with the Leap Motion API.
 
 
-Compilation Instructions (OS X and Linux)
------------------------------------------
+Build Instructions
+------------------
+1. git clone https://github.com/codingricky/brick-attack-leapmotion
+2. cd brick-attack-leapmotion
+3. mvn clean install
+4. cd brick-attack-leapmotion/target/brick-attack-leapmotion-1.0-SNAPSHOT-release/brick-attack-leapmotion-1.0-SNAPSHOT/
+5. ./game.sh
 
-Change directory into brick-attack-master/Brick\ Attack/src/
-
-Execute "javac org/skree/brickattack/*.java"
-
-Run program by executing "java org/skree/brickattack/Main"
+You should be able to use your hands to move the paddle left and right. 
