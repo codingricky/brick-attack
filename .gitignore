@@ -1,5 +1,5 @@
 .idea
 *.iml
-brick-attack/target
+brick-attack-game/target
 repository/target
 brick-attack-leapmotion/target
